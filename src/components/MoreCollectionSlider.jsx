@@ -4,7 +4,7 @@ import { dummyStamps } from '@/utils/StampData';
 
 const MoreCollectionSlider = () => {
   return (
-    <div className="bg-[rgb(25,28,30)] text-white p-8">
+    <div className="text-white p-8">
       <h2 className="text-2xl font-semibold mb-6 flex justify-center items-center">More from this collection</h2>
       <div className="flex space-x-6 overflow-x-scroll scrollbar-hide w-full">
         {dummyStamps.map((stamp) => (

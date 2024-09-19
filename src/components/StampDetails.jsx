@@ -1,156 +1,135 @@
 "use client";
 import Image from "next/image";
-import { ReactElement } from "react";
 import MoreCollectionSlider from "./MoreCollectionSlider";
 
 const StampDetails = ({ product }) => {
   return (
-    <div className="bg-[#191C1E] text-white min-h-screen">
-      {/* Stamp details */}
-      <div className="max-w-5xl mx-auto p-4 m-4 mr-10">
-        <div key={product?.id} className="mb-8">
-          {/* Main Content */}
-          <div className="grid grid-cols-2 gap-8">
-            {/* Left Section - Image */}
-            <div className="flex justify-center rounded-md p-2 h-[350px]">
-              <Image
-                src={product?.image}
-                alt={product?.title}
-                width={product?.width || 300} 
-                height={product?.height || 300}
-                layout="intrinsic" 
-                className="rounded-md"
-              />
-            </div>
-
-            {/* Right Section - Details */}
-            <div className="flex flex-col justify-center">
-              <div>
-                <h1 className="text-xl font-bold mb-3">{product?.title}</h1>
-                <div className="flex flex-col space-x-2 mb-3">
-                  <span className="flex flex-row  text-gray-400 text-sm">
-                    Rarity
-                    <div className="ml-2 bg-[#f6c339] text-[12px] text-black font-bold rounded-full px-2 py-[1px]">
-                      {product?.rarity}%
-                    </div>
-                  </span>
-                  <div className="flex flex-row m-4">
-                    {/* Creator */}
-                    <div className="flex space-x-2 items-center mr-16 mt-1">
-                      <div className="w-8 h-8 bg-purple-700 rounded-full mr-1"></div>
-                      <div className="flex flex-col">
-                        <span className=" text-gray-400 text-[13px]">
-                          Creator
-                        </span>
-                        <span className="text-[14px]">
-                          {product?.creator}
-                        </span>
-                      </div>
-                    </div>
-                    {/* Owner */}
-                    <div className="flex space-x-2 items-center">
-                      <div className="w-8 h-8 bg-[#d426d4] rounded-full mr-1"></div>
-                      <div className="flex flex-col">
-                        <span className="text-gray-400 text-[13px]">
-                          Current owner
-                        </span>
-                        <span className="text-[14px]">
-                          {product?.owner}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Partition line */}
-                <div className="border border-gray-700"></div>
-              </div>
-              {/* Options */}
-              <div className="flex items-center justify-between text-[13px] text-gray-400 w-[320px]">
-                <div className="flex flex-row items-center">
-                  <div className="flex items-center m-3">
-                    <img src="/images/Heart.svg" alt="heart" className="m-2" />
-                    {product?.likes}
-                  </div>
-                  <div className="flex items-center m-3">
-                    <img src="/images/Share.svg" className="m-2" />
-                    Share
-                  </div>
-                  <div className="flex items-center m-3">
-                    <img src="/images/Refresh.svg" className="m-1" />
-                    Refresh
-                  </div>
-                </div>
-                <div className="m-3">
-                  <img src="/images/Ellipsis.svg" className="m-1" />
-                </div>
-              </div>
-              {/* Price */}
-              <div className="bg-[#191C1E] p-3 rounded-xl mx-auto w-[350px] border border-gray-800 -ml-3">
-                <div className="bg-[#252728] p-2 rounded-xl mb-3">
-                  <div className="text-gray-400 text-sm ml-3">Price</div>
-                  <div className="text-white text-xl font-semibold ml-3">
-                    ₹{product?.price}
-                  </div>
-                </div>
-                <button className="w-full text-lg px-3 py-1 bg-white text-black font-bold rounded-xl hover:text-white hover:bg-slate-600">
-                  Buy Now
-                </button>
-              </div>
-            </div>
+    <div className="text-white min-h-screen py-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Main Section */}
+        <div key={product?.id} className="grid grid-cols-1 md:grid-cols-2 gap-12 p-8 rounded-xl">
+          {/* Image Section */}
+          <div className="flex justify-center items-center rounded-lg overflow-hidden h-full w-full">
+            <Image
+              src={product?.image}
+              alt={product?.title}
+              width={300}
+              height={300}
+              layout="intrinsic"
+              className="object-cover rounded-md"
+            />
           </div>
-          <div className="grid grid-cols-1 gap-x-24 mt-10">
-            {/* Left Section - Overview */}
-            <div className="flex flex-col bg-[#191c1e] p-3 rounded-md">
-              {/* Overview */}
-              <div className="mb-3 w-full">
-                <div className="flex justify-start">
-                  <h1 className="text-white text-md focus:outline-none border-b-4 border-white pb-1">
-                    Overview
-                  </h1>
+
+          {/* Details Section */}
+          <div className="flex flex-col justify-between space-y-6">
+            <h1 className="text-3xl font-bold w-[80%]">{product?.title}</h1>
+            <div className="flex items-center space-x-4 text-gray-400 text-sm">
+              <span className="text-lg">Rarity:</span>
+              <span className="bg-[#f6c339] text-black font-semibold rounded-xl px-2 py-1">{product?.rarity}%</span>
+            </div>
+            <div className="flex space-x-8 text-sm text-gray-300">
+              <div className="flex items-center space-x-2 mr-20">
+                <div className="w-8 h-8 bg-purple-700 rounded-full mr-2"></div>
+                <div>
+                  <span className="block text-gray-400">Creator</span>
+                  <span>{product?.creator}</span>
                 </div>
-                {/* Partition line */}
-                <div className="border-b border-gray-700 w-full"></div>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-[#d426d4] rounded-full mr-2"></div>
+                <div>
+                  <span className="block text-gray-400">Current Owner</span>
+                  <span>{product?.owner}</span>
+                </div>
+              </div>
+            </div>
+            {/* partition line */}
+            <div className="border-b border-gray-700 mt-6 mb-4 w-[500px]"></div>
+            <div className="flex items-center space-x-6">
+              <button className="flex items-center space-x-2 text-gray-400">
+                <img src="/images/Heart.svg" alt="heart" className="w-6 h-6" />
+                <span>{product?.likes}</span>
+              </button>
+              <button className="flex items-center space-x-2 text-gray-400">
+                <img src="/images/Share.svg" alt="share" className="w-6 h-6" />
+                <span>Share</span>
+              </button>
+              <button className="flex items-center space-x-2 text-gray-400">
+                <img src="/images/Refresh.svg" alt="refresh" className="w-6 h-6" />
+                <span>Refresh</span>
+              </button>
+            </div>
+
+            {/* Price and Buy Now Section */}
+            <div className="bg-[#191C1E] p-4 rounded-xl border border-[#2c2f32] w-[500px]">
+              {/* Price Section */}
+              <div className="mb-4 bg-[#2a2c2e] w-full h-[70px] rounded-xl flex flex-col mt-2">
+                <p className="text-gray-400 text-sm ml-4 mt-2">Price</p>
+                <p className="text-white text-2xl font-semibold ml-4">{product.price}</p>
               </div>
 
-              {/* Description */}
-              <div className="mb-8 mt-4">
-                <h2 className="text-lg font-semibold text-white mb-3">Description</h2>
-                <p className="text-gray-200 text-sm">{product?.description}</p>
-              </div>
-              {/* Details */}
-              <div>
-                <h2 className="text-lg font-semibold text-white mb-3">Details</h2>
-                <div className="bg-[#191c1e] p-3 rounded-md mb-3 border border-gray-700">
-                  <div className="flex items-center text-white mb-2">
-                    <img src="/images/aptos.svg" className="m-2" />
-                    <span className="text-gray-200 text-sm">
-                      {product?.shortTitle}
-                    </span>
-                  </div>
-                  <div className="flex items-center text-white mb-2">
-                    <img src="/images/aptos.svg" className="m-2" />
-                    <span className="text-gray-200 text-sm">
-                      Release Date: {product?.releaseDate}
-                    </span>
-                    <img src="/images/chevron.svg" className="m-2" />
-                  </div>
-                  <div className="flex items-center text-white">
-                    <img src="/images/view.svg" className="m-2" />
-                    <span className="text-gray-200 text-sm">View</span>
-                    <img src="/images/chevron.svg" className="m-2" />
-                  </div>
-                  {/* Partition line */}
-                  <div className="border border-gray-700 m-3"></div>
-                  <div className="text-gray-300 flex flex-row mt-4 text-sm">
-                    <img src="/images/Refresh.svg" className="m-1" />
-                    {product?.numOfReviews} reviews
-                  </div>
-                </div>
-              </div>
+              {/* Buy Now Button */}
+              <button className="w-full py-3 bg-white text-black font-bold text-xl rounded-xl hover:bg-gray-400 hover:text-white transition duration-300 ease-in-out mb-2">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
-        <MoreCollectionSlider />
+
+        {/* Overview and Details Section */}
+        <div className="text-white py-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Overview Section */}
+            <div className="p-8 -mt-8"> 
+              <h2 className="text-2xl font-semibold mb-2 pb-2">Overview</h2>
+              <div className="border border-gray-700"></div>
+
+              {/* Description */}
+              <div className="mt-4 ml-3"> 
+                <h3 className="text-2xl font-semibold mb-2">Description</h3>
+                <p className="text-gray-400 text-md">{product.description}</p>
+              </div>
+
+              {/* Details Section */}
+              <div className="mt-6"> 
+                <h3 className="text-2xl font-semibold mb-4 ml-3">Details</h3>
+                <div className="space-y-4 border border-gray-700 rounded-xl w-[600px] h-[200px] flex flex-col justify-center">
+                  {/* First Detail: Title */}
+                  <div className="flex items-center ml-4">
+                    <img src="/images/aptos.svg" alt="title" className="w-4 h-4 mr-2" />
+                    <span className="text-gray-300">{product.shortTitle}</span>
+                  </div>
+
+                  {/* Second Detail: Release Date */}
+                  <div className="flex items-center ml-4">
+                    <img src="/images/aptos.svg" alt="release date" className="w-4 h-4 mr-2" />
+                    <span className="text-gray-300">
+                      Release Date: <span>{product.releaseDate}</span>
+                    </span>
+                  </div>
+
+                  {/* Third Detail: View */}
+                  <div className="flex items-center ml-4">
+                    <img src="/images/view.svg" alt="view" className="w-4 h-4 mr-2" />
+                    <span className="text-gray-300">View</span>
+                  </div>
+                  <div className="border-b border-gray-700 ml-4 w-[550px]"></div>
+                  {/* Number of Reviews */}
+                  <div className="mt-4 text-gray-400 ml-4">
+                    <span className="flex items-center">
+                      <img src="/images/refresh.svg" alt="reviews" className=" w-4 h-4 mr-2" />
+                      {product.numOfReviews} reviews
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* More Collections Slider */}
+        <MoreCollectionSlider className="-mt-4" /> {/* Reduced margin-top */}
       </div>
     </div>
   );
