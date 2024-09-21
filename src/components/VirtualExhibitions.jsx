@@ -1,26 +1,12 @@
-"use client"
-import React, { useState } from 'react';
+
+import React from 'react';
 import Image from 'next/image';
 import VirtualExhibitionsCard from './VirtualExhibitionsCard';
 import { dummyExhibitions } from '@/utils/virtualExhibitionsDataCO';
 import { dummyExhibitions2 } from '@/utils/virtualExhibitionsDataUpcoming';
 
+
 const VirtualExhibitions = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  // Filter exhibitions based on search term
-  const filteredExhibitions1 = dummyExhibitions.filter(exhibition =>
-    exhibition.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const filteredExhibitions2 = dummyExhibitions2.filter(exhibition =>
-    exhibition.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
   return (
     <div>
       <div className="flex flex-col w-full p-4 bg-gray-100">
@@ -54,8 +40,6 @@ const VirtualExhibitions = () => {
               type="text"
               placeholder="Search"
               className="w-full p-2 focus:outline-none text-black"
-              value={searchTerm}
-              onChange={handleSearchChange}
             />
             {/* Go Button */}
             <button className="bg-[#00539B] text-white px-6">
@@ -69,7 +53,7 @@ const VirtualExhibitions = () => {
             <div className='w-full max-w-screen-lg'>
               <h1 className="text-3xl font-bold mb-4 text-black">Currently Open</h1>
               <div className='grid grid-cols-3 gap-x-48 gap-y-6'>
-                {filteredExhibitions1.map((exhibition) => (
+                {dummyExhibitions.map((exhibition) => (
                   <VirtualExhibitionsCard key={exhibition.id} virtualExhibition={exhibition} />
                 ))}
               </div>
@@ -79,7 +63,7 @@ const VirtualExhibitions = () => {
             <div className='w-full max-w-screen-lg mt-16'>
               <h1 className="text-3xl font-bold text-black mb-5">Upcoming</h1>
               <div className='grid grid-cols-3 gap-x-48 gap-y-6'>
-                {filteredExhibitions2.map((exhibition) => (
+                {dummyExhibitions2.map((exhibition) => (
                   <VirtualExhibitionsCard key={exhibition.id} virtualExhibition={exhibition} />
                 ))}
               </div>
@@ -90,5 +74,3 @@ const VirtualExhibitions = () => {
     </div>
   );
 };
-
-export default VirtualExhibitions;
