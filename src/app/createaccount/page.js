@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 
-function Page() {
+function createAccountPage() {
   const [emailSent, setEmailSent] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -151,4 +151,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default createAccountPage;

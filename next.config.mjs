@@ -2,9 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['randomuser.me', 'assets.aceternity.com'], // Add the external domains here
+    domains: ['randomuser.me', 'assets.aceternity.com', 'upload.wikimedia.org'], 
   },
- 
 };
 
 export default nextConfig;
