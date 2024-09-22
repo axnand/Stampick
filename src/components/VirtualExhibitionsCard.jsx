@@ -6,7 +6,7 @@ const VirtualExhibitionsCard = ({ virtualExhibition }) => {
       {/* Save and Share Icons */}
       <div className="absolute top-2 right-2 flex space-x-2">
         <button aria-label="Share" className="-mt-[0.5%] w-9 h-9 flex justify-center items-center text-gray-600 border border-gray-300 rounded-full hover:text-gray-800">
-        <img src='/images/Share2.svg' />
+          <img src='/images/Share2.svg' />
         </button>
         <button aria-label="Bookmark" className="w-8 h-8 flex justify-center items-center text-gray-600 border border-gray-300 rounded-full hover:text-gray-800">
           <img src='/images/bookmark.svg' />
