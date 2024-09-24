@@ -13,23 +13,26 @@ export const usePopup = () => {
   return { isPopUpOpen, togglePopUp };
 };
 
-export const Popup = ({ isPopUpOpen, togglePopUp, children }) => {
+export const Popup = ({ isPopUpOpen, togglePopUp, children, popupType }) => {
   if (!isPopUpOpen) return null;
 
+  // Set different width based on the popup type
+  const popupWidth = popupType === 'signIn' ? 'w-[70vw]' : 'w-[50vw]';
+  const isSignIn = popupType === 'signIn'; 
 
   return createPortal(
     <div
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[99999]"
-      style={{ zIndex: 99999, position: 'fixed' }}
+      style={{ zIndex: 99999 }}
     >
-      <div className="relative flex flex-col space-y-1 w-[55vw] md:h-[100vh] h-[80vh] overflow-auto p-6 shadow-lg">
-        {/* Popup content */}
-        <div className="bg-[#191c1e] relative w-auto md:max-h-[85vh] max-h-[60vh] overflow-auto p-6 scrollbar-hide mt-8">
-        <div onClick={togglePopUp} className="cursor-pointer w-full flex justify-end">
-          {/* Close button */}
-          <img src="/images/cross.svg" alt="Close" className='fixed'/>
-        </div>
-          <div>{children}</div>
+      {/* Conditional width and height for SignIn */}
+      <div className={`relative flex flex-col ${popupWidth} ${isSignIn ? 'w-[70vw] h-[90vh]' : 'w-[50vw]'} overflow-hidden shadow-lg`}>
+        <div className="bg-[#191c1e] relative w-full h-full overflow-auto p-0 scrollbar-hide">
+          <div onClick={togglePopUp} className="cursor-pointer w-full flex justify-end">
+            {/* Close button */}
+            <img src="/images/cross.svg" alt="Close" className="fixed mt-4 mr-4" />
+          </div>
+          <div className={`w-full h-full ${isSignIn ? 'p-0' : 'p-6'}`}>{children}</div> 
         </div>
       </div>
     </div>,
