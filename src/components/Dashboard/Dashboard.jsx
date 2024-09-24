@@ -1,190 +1,60 @@
+
+
+
+import React from 'react'
+
 function Dashboard() {
   return (
-    <div className="isolate px-3 bg-white w-full">
-      <div className="max-w-2xl pl-8 mt-4">
-        <h2 className="text-xl font-medium tracking-tight text-black sm:text-3/2xl">
-          Personal Information
-          <button type="button" className="ml-4 text-blue-600 text-sm hover:text-blue-800">
-            Edit
-          </button>
-        </h2>
-      </div>
-      <form action="#" method="POST" className="mt-4 pl-8 max-w-xl">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          {/* First Name */}
-          <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-black">
-              First name
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
-                required
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          {/* Last Name */}
-          <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-              Last name
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                autoComplete="family-name"
-                required
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-          {/* Gender Selection */}
-          <div className="sm:col-span-2 mt-4 ">
-            <h2 className="text-sm font-semibold leading-6 text-black mb-2">
-              Select Your Gender
-            </h2>
-            <div className="flex flex-col gap-2">
-              <label className="flex items-center">
-                <input type="radio" name="gender" value="Male" className="mr-2" required />
-                Male
-              </label>
-              <label className="flex items-center">
-                <input type="radio" name="gender" value="Female" className="mr-2" required />
-                Female
-              </label>
-            </div>
-          </div>
-
-          {/* Email */}
-          <div className="sm:col-span-2 mt-6">
-            <h2 className="text-xl font-medium text-black mb-4">
-              Email
-              <button type="button" className="ml-4 text-blue-600 text-sm hover:text-blue-800">
-                Edit
-              </button>
-            </h2>
-            <div className="mt-1">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                autoComplete="email"
-                required
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-          {/* Phone Number */}
-          <div className="sm:col-span-2 mt-6">
-            <h2 className="text-xl font-medium text-black mb-4">
-              Phone Number
-              <button type="button" className="ml-4 text-blue-600 text-sm hover:text-blue-800">
-                Edit
-              </button>
-            </h2>
-            <div className="flex space-x-2 gap-1">
-              {/* Country Code */}
-              <div>
-                <label htmlFor="country-code" className="block text-sm font-semibold leading-6 text-black">
-                  Country Code
-                </label>
-                <select
-                  id="country-code"
-                  name="country-code"
-                  className="mt-1 w-20 rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                >
-                  <option>+1</option>
-                  <option>IND +91</option>
-                  <option>+44</option>
-                  <option>+33</option>
-                </select>
-              </div>
-              
-              {/* Phone Number */}
-              <div className="flex-grow">
-                <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-black">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  autoComplete="tel"
-                  required
-                  className="mt-0.5 block w-full rounded-md border-0 px-3 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
-
-      {/* FAQs Section */}
-      <form action="#" method="POST" className="mt-12 pl-11 ">
-        <div className="sm:col-span-2 mt-6">
-          <h2 className="text-xl font-medium text-black">FAQs</h2>
-          <div className="space-y-4 mt-2">
-            <div>
-              <h3 className="font-medium text-md">
-                What happens when I update my email address (or mobile number)?
-              </h3>
-              <p className="text-gray-700 mt-0 text-sm">
-                Your login email id (or mobile number) changes, likewise. You&apos;ll receive
-                all your account-related communication on your updated email address (or
-                mobile number).
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-medium text-md">
-                When will my StamPick account be updated with the new email address (or
-                mobile number)?
-              </h3>
-              <p className="text-gray-700 mt-0 text-sm">
-                It happens as soon as you confirm the verification code sent to your
-                email (or mobile) and save the changes.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-medium text-md">
-                What happens to my existing StamPick account when I update my email address (or mobile number)?
-              </h3>
-              <p className="text-gray-700 mt-0 text-sm">
-                Updating your email address (or mobile number) doesn&apos;t invalidate your account. Your account remains fully functional. You&apos;ll
-                continue seeing your Order history, saved information and personal details.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-medium text-md">
-                Does my Seller account get affected when I update my email address?
-              </h3>
-              <p className="text-gray-700 mt-0 text-sm">
-                StamPick has a 'single sign-on' policy. Any changes will reflect in your Seller account also.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 mb-6">
-            <a href="#" className="text-blue-600 hover:underline mr-4 ">
-              Deactivate Account
-            </a>
-            <br />
-            <br />
-            <a href="#" className="text-red-500 hover:underline mt-4">
-              Delete Account
-            </a>
-          </div>
-        </div>
-      </form>
+    <div className="p-8 bg-white text-gray-800  w-full shadow-lg rounded-lg  ">
+      <div className='flex gap-3'>
+      <div className=" justify-center mb-6 flex">
+      <img
+        src="https://scontent.fdel63-1.fna.fbcdn.net/v/t39.30808-6/295332627_388618813382859_7611317495166121121_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=I70BkyQzYEkQ7kNvgHgFKn6&_nc_ht=scontent.fdel63-1.fna&oh=00_AYCUbQIfpXWap0rA7AWoQODF1lr0nl4MvheRSLb5sdQDYw&oe=66F4AF12" // Replace with the actual path to your peacock image
+        alt="Peacock"
+        className="h-24 w-20"
+      />
     </div>
-  );
+
+    {/* Heading */}
+<div className='mt-9'>
+<h1 className="text-2xl font-bold text-center mb-4">
+      Philatelic Deposit Account
+    </h1>
+</div>
+      </div>
+    {/* Peacock Image */}
+   
+   
+
+    {/* Description */}
+    <p className="text-justify mb-6 font-normal">
+      A domestic philatelic deposit account (PDA) system was introduced with effect from 1.8.1965 at all philatelic bureaus in India. The customers who wish to take advantage of this facility are supplied with the commemorative/special issues of stamps; first day covers (FDCs); information sheets and postal stationery soon after their issue. Domestic philatelic account holders can also obtain philatelic items issued by other philatelic bureaus and offices by placing their demands with the Bureau where their accounts stand.
+    </p>
+
+    <p className="text-justify mb-6 font-normal">
+      Philatelic counters are functioning at all the Head Post Offices. The philatelic counter at offices other than philatelic bureaus would offer registration facilities for the opening of philatelic deposit accounts with supply of the material to be made by the parent bureau of the respective counter with customers having the option to book from the counter of registration.
+    </p>
+
+    {/* Subheading */}
+  <div>
+  <span className='font-bold '>How to open a Philatelic Deposit Account:</span> If anyone wishes to operate a Philatelic Deposit Account with the Philatelic Bureau, an application in the prescribed proforma may be sent to the Philatelic Bureau.
+  </div>
+    <div className='mt-4'>
+    <span className='font-bold'> Conditions of Service:</span> The account may be opened with a minimum deposit of Rs. 200/- in cash or by remittance by money order or by cheque encashable in India. With the remittances, the customers should also indicate clearly the types and quantities of philatelic items they desire to purchase with each issue of new stamp. The items indicated in the application form will be dispatched to the customer automatically without any further orders on the part of the customer.
+    </div> 
+   <div className='mt-3'>
+    <span className='font-bold'> Mode of dispatch and charges for dispatch of philatelic items:</span>The items will be dispatched free "on postal service" by registered post unless the customer specifically desires that the items should be sent to them by insured post. The Philatelic Deposit Account holder may also collect these after every issue by calling at the counter of the philatelic bureau.
+   </div>
+     
+    
+
+   
+    {/* Last Updated */}
+    <p className=" text-gray-600 mt-4">
+      Last Updated: <strong>14 Feb 2022</strong>
+    </p>
+  </div>
+  )
 }
 
-export default Dashboard;
+export default Dashboard
