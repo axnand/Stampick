@@ -14,27 +14,27 @@ const Spotlight = () => {
         link:"https://economictimes.indiatimes.com/news/politics-and-nation/india-post-to-release-stamps-on-ramayana-mahabharata-ravi-shankar-prasad/articleshow/48775918.cms"
       },
       {
-        title: "⦁	Philatelists take centre stage at KARNAPEX 2024",
+        title: "	Philatelists take centre stage at KARNAPEX 2024",
         image: "/spotlight/Philatelist.svg",
         description: "KARNAPEX 2024, which took place in Bengaluru’s Sree Kanteerava Indoor Stadium between the 5th and 8th of January, showcased the cultural richness and historical splendour of stamps.  This 13th state-level philatelic exhibition immersed stamp enthusiasts, offering more than 690 frames filled with stamps that paid tribute to Karnataka’s diverse heritage.",
         source: "Spotlight",
         link:"https://www.thehindu.com/news/cities/bangalore/philatelists-take-centre-stage-at-karnapex-2024/article67715288.ece"      },
       {
-        title: "⦁	#NationalPhilatelyDay: The charm of stamp collection that was, and is",
+        title: "	#NationalPhilatelyDay: The charm of stamp collection that was, and is",
         image: "/spotlight/PhilateyDay.jpg",
         description: "On National Philately Day, Delhi-based philatelists talk about their love for collecting stamps and their coveted collections running into lakhs of stamps and postal material. Away from the Capital’s busy life, a group of veteran stamp collectors used to meet every month, in RK Puram, and discuss about and all things philately including their collections that have lakhs of stamps.",
         source: "Spotlight",
         link:"https://www.hindustantimes.com/lifestyle/art-culture/nationalphilatelyday-the-charm-of-stamp-collection-that-was-and-is-101634104977848.html"
       },
       {
-        title: "⦁	A collection worth bowing to: Abdul Rasul's trove of 5,915 mosque stamps sets a world record",
+        title: "	A collection worth bowing to: Abdul Rasul's trove of 5,915 mosque stamps sets a world record",
         image: "/spotlight/StampRecord.jpeg",
         description: "Y. Abdul Rasul was one of many philatelists collecting whatever stamps came his way, till a chance meeting with Viswanatha Iyer, another philatelist, in 2005 paved the way for his entry into the Guinness Book of Records.",
         source: "Spotlight",
         link:"https://www.thehindu.com/news/national/tamil-nadu/a-collection-worth-bowing-to/article18962311.ece"
       },
       {
-        title: "⦁	The 10 Most Valuable U.S. Stamps",
+        title: "	The 10 Most Valuable U.S. Stamps",
         image: "/spotlight/USstamp.svg",
         description: "What draws people to stamps? Why do we get a thrill from seeing Wonder Woman, astronauts, presidents, and Americana on these small pieces of affixable paper? One possibility is that they are at once so many things: they’re art, they’re history, they’re antiques, they’re money, they’re miniatures—all wrapped up in the romanticism of the letters they set into motion.",
         source: "Spotlight",
@@ -43,11 +43,11 @@ const Spotlight = () => {
     ],
     news: [
       {
-        title: "Britain's Royal Mail celebrates 65 years of Paddington",
-        image: "/spotlight/Ramayna.svg",
-        description: "Government will release stamps on Ramayana, Mahabharata, besides honoring freedom fighters.",
+        title: "Shoring up philately",
+        image: "/spotlight/News-B.svg",
+        description: "A day dedicated to the pursuit of stamps is just three weeks away and groups formed around the hobby are planning events to observe it. Over the years, these groups have dwindled, and the enthusiasm for such gatherings has waned.The Hindu Downtown tracks efforts to check the decline ",
         source: "Powered by StamPick",
-        link:""
+        link:"https://www.thehindu.com/news/cities/chennai/shoring-up-philately/article68668367.ece"
       },
       {
         title: "Britain’s Royal Mail celebrates 65 years of Paddington with Sept. 5 issue",
@@ -80,34 +80,34 @@ const Spotlight = () => {
     ],
     interviews: [
       {
-        title: "India Post to release stamps on Ramayana,  Mahabharata: Ravi Shankar Prasad",
-        image: "/spotlight/Ramayna.svg",
-        description: "Government will release stamps on Ramayana, Mahabharata, besides honoring freedom fighters.",
+        title: "A Chat with Samuel West - #philately",
+        image: "/spotlight/Interviews-B.svg",
+        description: "I interview and chat with Actor and Philatelist, Samuel West, in this very special episode of #philately.Sam's love for philately is inspiring and thought provoking, watch and listen as he provides a wonderful insight into stamp collecting, his specialized collection, Postcrossing, Stamp Shows, the Virtual philatelic world, and more.",
         source: "Powered by StamPick",
-        link: "https://google.com"
+        link: "https://www.youtube.com/watch?v=Fu35uViRAJg"
       },
       {
-        title: "⦁	Stampex 2023 Visit: ⦁	#philately 43",
+        title: "	Stampex 2023 Visit: ⦁	#philately 43",
         image: "/spotlight/Stampex-2023.jpg",
         description: "Britain’s Royal Mail releases new stamps celebrating Paddington.",
         source: "Spotlight",
         link:"https://youtu.be/ZWdmxN6-zN4?si=1TSMcZ8kMmTJG3Nl"
       },
       {
-        title: "⦁	Interview with a Philatelic Icon - Wade Saadi",
+        title: "	Interview with a Philatelic Icon - Wade Saadi",
         image: "/spotlight/Wade-Saadi.jpg",
         description: "Britain’s Royal Mail releases new stamps celebrating Paddington.",
         source: "Spotlight",
         link:"https://www.youtube.com/live/3mIS0yG_kt8?si=hplxWvO559q0fULQ"
       },
       {
-        title: "⦁	Detecting counterfeit USPS Forever Stamps with Wayne Youngblood",
+        title: "	Detecting counterfeit USPS Forever Stamps with Wayne Youngblood",
         image: "/spotlight/Wayne.jpg",
         description: "Britain’s Royal Mail releases new stamps celebrating Paddington.",
         source: "Spotlight"
       },
       {
-        title: "⦁	How To Assess and Break Down a Stamp Collection",
+        title: "	How To Assess and Break Down a Stamp Collection",
         image: "/spotlight/Conversations.jpg",
         description: "Britain’s Royal Mail releases new stamps celebrating Paddington.",
         source: "Spotlight",
