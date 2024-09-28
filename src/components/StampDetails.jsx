@@ -16,13 +16,13 @@ const StampDetails = ({ product }) => {
               width={300}
               height={300}
               layout="intrinsic"
-              className="object-cover rounded-md"
+              className="object-cover"
             />
           </div>
 
           {/* Details Section */}
           <div className="flex flex-col justify-between space-y-6">
-            <h1 className="text-3xl font-bold w-[80%]">{product?.title}</h1>
+            <h1 className="text-3xl font-bold w-[80%]">{product?.collectibletitle}</h1>
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span className="text-lg">Rarity:</span>
               <span className="bg-[#f6c339] text-black font-semibold rounded-xl px-2 py-1">{product?.rarity}%</span>

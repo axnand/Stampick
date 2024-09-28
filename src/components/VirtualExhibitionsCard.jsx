@@ -1,6 +1,12 @@
 import Image from 'next/image';
+import { useState } from 'react';
 
 const VirtualExhibitionsCard = ({ virtualExhibition }) => {
+  const [isSave, setIsSave] = useState(false);
+
+  const handleSaveButton = () => {
+      setIsSave(!isSave);
+  }
   return (
     <div className="max-w-sm mx-auto bg-white shadow-2xl overflow-hidden relative w-[25vw] h-[65vh]">
       {/* Save and Share Icons */}
@@ -8,8 +14,13 @@ const VirtualExhibitionsCard = ({ virtualExhibition }) => {
         <button aria-label="Share" className="-mt-[0.5%] w-9 h-9 flex justify-center items-center text-gray-600 border border-gray-300 rounded-full hover:text-gray-800">
           <img src='/images/Share2.svg' />
         </button>
-        <button aria-label="Bookmark" className="w-8 h-8 flex justify-center items-center text-gray-600 border border-gray-300 rounded-full hover:text-gray-800">
-          <img src='/images/bookmark.svg' />
+        <button
+          onClick={handleSaveButton} 
+          aria-label="Bookmark" 
+          className="w-8 h-8 flex justify-center items-center text-gray-600 border border-gray-300 rounded-full hover:text-gray-800">
+            <img src= {!isSave? '/images/bookmark.svg'
+              : 
+            '/images/bookmarked.svg'} />
         </button>
       </div>
 

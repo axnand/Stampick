@@ -2,7 +2,6 @@
 import React from "react";
 import UserStampCollections from './UserStampCollections'
 
-
 const UserProfile = ({user, collections}) => {
   return (
     <div className="min-h-screen bg-[#191C1E] text-white">
@@ -13,14 +12,14 @@ const UserProfile = ({user, collections}) => {
       <div className="relative -mt-16 px-6">
         <div className="flex justify-between items-center">
           {/* Profile Picture and Name */}
-            <div className="flex flex-col space-x-4 ml-10 -mt-10">
+            <div className="flex flex-col space-x-4 ml-10 -mt-16">
                 <img
-                src={user?.profileImage} 
+                src={user?.img} 
                 alt="Profile"
-                className="w-36 h-36 rounded-full"
+                className="w-44 h-44 rounded-full"
                 />
                 <div>
-                <h1 className="text-4xl mt-4 -ml-7">{user?.name}</h1>
+                <h1 className="text-4xl mt-4 -ml-7">{user?.collector}</h1>
                 </div>
                 
                 <div className="flex space-x-4">

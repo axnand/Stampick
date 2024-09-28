@@ -2,7 +2,6 @@
 import React from "react";
 import StampCard from "./StampCard"; 
 
-
 const UserStampCollections = ({user, collections}) => {
     return (
         <>
@@ -64,7 +63,6 @@ const UserStampCollections = ({user, collections}) => {
                     </div>
                 ))}
             </div>
-
         </>
     );
 };
