@@ -29,14 +29,14 @@ const StampDetails = ({ product }) => {
             </div>
             <div className="flex space-x-8 text-sm text-gray-300">
               <div className="flex items-center space-x-2 mr-20">
-                <div className="w-8 h-8 bg-purple-700 rounded-full mr-2"></div>
+                <img className="w-8 h-8 bg-purple-700 rounded-full mr-2" src='/profile/james.svg'></img>
                 <div>
                   <span className="block text-gray-400">Creator</span>
                   <span>{product?.creator}</span>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-[#d426d4] rounded-full mr-2"></div>
+                <img className="w-8 h-8 bg-[#d426d4] rounded-full mr-2" src='/images/profile.svg'></img>
                 <div>
                   <span className="block text-gray-400">Current Owner</span>
                   <span>{product?.owner}</span>
