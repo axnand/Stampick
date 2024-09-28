@@ -21,7 +21,7 @@ export const trendingData = {
             following: "100",
             isFollowing: false,
             ownedStamps: 5,
-            onSaleStamps: 2
+            onSaleStamps: 5
         },
         {
             collector: 'Husain',
@@ -44,7 +44,7 @@ export const trendingData = {
             following: "200",
             isFollowing: true,
             ownedStamps: 11,
-            onSaleStamps: 1
+            onSaleStamps: 8
         },
         {
             collector: 'Anand',
