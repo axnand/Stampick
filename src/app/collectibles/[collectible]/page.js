@@ -6,7 +6,6 @@ import { trendingData } from '@/utils/trendingData';
 const Page = ({ params }) => {
   const { collectible } = params;
 
-  // Function to find collectible data
   const findCollectibleData = (collectibleName) => {
     for (const period in trendingData) {
       const collectibleData = trendingData[period].find(
@@ -19,15 +18,12 @@ const Page = ({ params }) => {
     return null;
   };
 
-  // Find the collectible data based on the collectible name
   const collectibleData = findCollectibleData(collectible);
 
-  // If no data found, display a message
   if (!collectibleData) {
     return <div className="text-white">Collectible not found</div>;
   }
-
-  // Pass the collectible data to the StampDetails component
+  
   return (
     <StampDetails product={collectibleData} className='' />
   );

@@ -8,7 +8,6 @@ import { dummyExhibitions2 } from '@/utils/VirtualExhibitionsDataUpcoming';
 const VirtualExhibitions = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter exhibitions based on search term
   const filteredExhibitions1 = dummyExhibitions.filter(exhibition =>
     exhibition.title.toLowerCase().includes(searchTerm.toLowerCase())
   );

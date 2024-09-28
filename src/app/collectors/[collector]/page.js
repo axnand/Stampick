@@ -7,7 +7,6 @@ import { trendingData } from '@/utils/trendingData';
 const UserProfilePage = ({ params }) => {
   const { collector } = params; 
 
-  // Find the collector data across all time periods
   const findCollectorData = (collectorName) => {
     for (const period in trendingData) {
       const collectorData = trendingData[period].find(
@@ -20,7 +19,6 @@ const UserProfilePage = ({ params }) => {
     return null;
   };
 
-  // Get user data based on the collector name
   const user = findCollectorData(collector);
 
   if (!user) {
