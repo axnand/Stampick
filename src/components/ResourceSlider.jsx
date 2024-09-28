@@ -52,10 +52,10 @@ export default function ResourceSlider() {
         </SwiperSlide>
         <SwiperSlide className='rounded-lg h'>
           <div className='bg-[#0F0F0F] rounded-lg flex space-y-4 flex-col w-full h-full py-2 px-3'>
-          <div className='w-full h-[220px] object-cover rounded-lg bg-[#272727]'>
-          <Image src={'/spotlight/R-img3.svg'} width={100} height={100} alt="Resource" />
+          <div className='w-full h-[220px] rounded-lg bg-[#272727]'>
+          <Image src={'/spotlight/R-img3.svg'} width={10} height={10} alt="Resource" className='rounded-lg' />
             </div>
-            <a href='https://google.com' target="blank">
+            <a href='https://www.youtube.com/watch?v=Gsdn2B3Ngsc' target="blank">
               <div className='font-bold text-left px-2 underline underline-offset-4'>
               My Postage Stamp Collection - Stamps I Use for Mail Art, Where I Buy Stamps & Store Them
               </div>
@@ -67,7 +67,7 @@ export default function ResourceSlider() {
         </SwiperSlide>
         <SwiperSlide className='rounded-lg h'>
           <div className='bg-[#CE0E2D] rounded-lg flex space-y-4 flex-col w-full h-full py-2 px-3'>
-          <div className='w-full h-[220px] rounded-lg bg-[#272727]'>
+          <div className='w-full h-[220px] object-cover rounded-lg bg-[#272727]'>
           <Image src={'/spotlight/R-img4.svg'} width={100} height={100} alt="Resource" />
             </div>
             <a href='https://dharaastamps.co.in/' target="blank">
@@ -84,7 +84,7 @@ export default function ResourceSlider() {
         <SwiperSlide className='rounded-lg h'>
           <div className='bg-[#df278c] rounded-lg flex space-y-4 flex-col w-full h-full py-2 px-3'>
             <div className='w-full h-[220px] object-cover rounded-lg bg-[#272727]'>
-              <Image src={'/spotlight/R-img5.svg'} width={100} height={100} alt="Resource" />
+              <Image src={'/spotlight/R-img5.svg'} width={100} height={100} alt="Resource" className='rounded-lg'/>
             </div>
             <a href='https://youtu.be/2xIik9VFtBA?si=Up9a0sQtDu2J_09m' target="blank">
               <div className='font-bold text-left px-2 underline underline-offset-4'>
