@@ -1,46 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link'; // Import the Link component
-
-const trendingData = {
-    '1H': [
-      { collector: 'Anand', img: '/profile/james.svg', items: 150, collectibleimg:'/profile/botanical.svg', collectible: 'Botanical Water Colour Collection', price: 'Rs.459' },
-      { collector: 'Husain', img: '/profile/james.svg', items: 129, collectibleimg:'/profile/botanical.svg', collectible: 'Legend Of Odisha', price: 'Rs.599' },
-      { collector: 'Priyanshu', img: '/profile/james.svg', items: 108, collectibleimg:'/profile/botanical.svg', collectible: 'Aptos', price: 'Rs.249' },
-      { collector: 'James', img: '/profile/james.svg', items: 103, collectibleimg:'/profile/botanical.svg', collectible: 'Gangadhar_Meher', price: 'Rs.349' },
-      { collector: 'Sami', img: '/profile/james.svg', items: 111, collectibleimg:'/profile/botanical.svg', collectible: 'Abbakka_Chowta', price: 'Rs.409' },
-      { collector: 'Pandey', img: '/profile/james.svg', items: 105, collectibleimg:'/profile/botanical.svg', collectible: 'Karpoori_Thakur', price: 'Rs.139' },
-      { collector: 'Jumal', img: '/profile/james.svg', items: 102, collectibleimg:'/profile/botanical.svg', collectible: 'New Arrival', price: 'Rs.549' },
-    ],
-    '1D': [
-      { collector: 'Husain', img: '/profile/james.svg', items: 130, collectibleimg:'/profile/botanical.svg', collectible: 'Legend Of Odisha', price: 'Rs.610' },
-      { collector: 'Sami', img: '/profile/james.svg', items: 115, collectibleimg:'/profile/botanical.svg', collectible: 'Botanical Water Colour Collection', price: 'Rs.460' },
-      { collector: 'Priyanshu', img: '/profile/james.svg', items: 110, collectibleimg:'/profile/botanical.svg', collectible: 'Aptos', price: 'Rs.250' },
-      { collector: 'Jumal', img: '/profile/james.svg', items: 109, collectibleimg:'/profile/botanical.svg', collectible: 'Gangadhar_Meher', price: 'Rs.349' },
-      { collector: 'James', img: '/profile/james.svg', items: 105, collectibleimg:'/profile/botanical.svg', collectible: 'Chandshekhar', price: 'Rs.999' },
-      { collector: 'Pandey', img: '/profile/james.svg', items: 100, collectibleimg:'/profile/botanical.svg', collectible: 'Abbakka_Chowta', price: 'Rs.399' },
-      { collector: 'Anand', img: '/profile/james.svg', items: 98, collectibleimg:'/profile/botanical.svg', collectible: 'New Arrival', price: 'Rs.599' },
-    ],
-    '7D': [
-      { collector: 'James', img: '/profile/james.svg', items: 112, collectibleimg:'/profile/botanical.svg', collectible: 'Botanical Water Colour Collection', price: 'Rs.500' },
-      { collector: 'Pandey', img: '/profile/james.svg', items: 108, collectibleimg:'/profile/botanical.svg', collectible: 'Gangadhar_Meher', price: 'Rs.349' },
-      { collector: 'Anand', img: '/profile/james.svg', items: 107, collectibleimg:'/profile/botanical.svg', collectible: 'Abbakka_Chowta', price: 'Rs.410' },
-      { collector: 'Sami', img: '/profile/james.svg', items: 106, collectibleimg:'/profile/botanical.svg', collectible: 'Aptos', price: 'Rs.260' },
-      { collector: 'Priyanshu', img: '/profile/james.svg', items: 103, collectibleimg:'/profile/botanical.svg', collectible: 'New Arrival', price: 'Rs.600' },
-      { collector: 'Jumal', img: '/profile/james.svg', items: 101, collectibleimg:'/profile/botanical.svg', collectible: 'Legend Of Odisha', price: 'Rs.600' },
-      { collector: 'Husain', img: '/profile/james.svg', items: 99, collectibleimg:'/profile/botanical.svg', collectible: 'Karpoori_Thakur', price: 'Rs.150' },
-    ],
-    '30D': [
-      { collector: 'Jumal', img: '/profile/james.svg', items: 118, collectibleimg:'/profile/botanical.svg', collectible: 'Chandshekhar', price: 'Rs.999' },
-      { collector: 'Pandey', img: '/profile/james.svg', items: 115, collectibleimg:'/profile/botanical.svg', collectible: 'Karpoori_Thakur', price: 'Rs.139' },
-      { collector: 'Husain', img: '/profile/james.svg', items: 114, collectibleimg:'/profile/botanical.svg', collectible: 'Gangadhar_Meher', price: 'Rs.349' },
-      { collector: 'Priyanshu', img: '/profile/james.svg', items: 113, collectibleimg:'/profile/botanical.svg', collectible: 'Botanical Water Colour Collection', price: 'Rs.459' },
-      { collector: 'James', img: '/profile/james.svg', items: 112, collectibleimg:'/profile/botanical.svg', collectible: 'Legend Of Odisha', price: 'Rs.599' },
-      { collector: 'Anand', img: '/profile/james.svg', items: 111, collectibleimg:'/profile/botanical.svg', collectible: 'Aptos', price: 'Rs.249' },
-      { collector: 'Sami', img: '/profile/james.svg', items: 110, collectibleimg:'/profile/botanical.svg', collectible: 'Abbakka_Chowta', price: 'Rs.409' },
-    ]
-  };
+import Link from 'next/link'; 
+import {trendingData} from '@/utils/trendingData.js'
 
 const TrendingComponent = () => {
   const [activeTab, setActiveTab] = useState('1D'); 
@@ -113,9 +75,9 @@ const TrendingComponent = () => {
 
                 {/* 2nd div: Collectible's name and image */}
                 <div className="w-10/12 flex items-center space-x-2">
-                  <Image src={item.collectibleimg} width={30} height={30} alt="Collectible" />
-                  <Link href={`/collectibles/${item.collectible.toLowerCase().replace(/\s+/g, '-')}`} passHref>
-                    <div className="hover:underline cursor-pointer">{item.collectible}</div>
+                  <Image src={item.image} width={30} height={30} alt="Collectible" />
+                  <Link href={`/collectibles/${item.collectibletitle.toLowerCase().replace(/\s+/g, '-')}`} passHref>
+                    <div className="hover:underline cursor-pointer">{item.collectibletitle}</div>
                   </Link>
                 </div>
 
@@ -125,6 +87,7 @@ const TrendingComponent = () => {
             ))}
           </div>
         </div>
+
       </div>
 
       {/* 3rd Section: View All Button */}
