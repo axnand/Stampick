@@ -14,7 +14,7 @@ const StampCard = ({ stamp }) => {
             className="h-52 object-cover transition-transform duration-300 ease-in-out"
           />
         </div>
-        <h3 className="font-semibold mb-2 text-center text-base">{stamp?.title}</h3>
+        <h3 className="font-semibold mb-2 text-center text-base">{stamp?.collectibletitle}</h3>
         <div className="flex justify-between items-center text-xs text-gray-300 font- mb-2 opacity-70 bg-[#222528] w-full px-4 py-1 rounded-md">
           <div className='flex flex-col space-y-1 text-sm'>
             <span>Minting: </span><span className='font-semibold text-white opacity-100'>{stamp?.minting}</span>

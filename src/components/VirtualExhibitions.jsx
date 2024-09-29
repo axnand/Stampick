@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import VirtualExhibitionsCard from './VirtualExhibitionsCard';
-import { dummyExhibitions } from '@/utils/VirtualExhibitionsDataCO';
-import { dummyExhibitions2 } from '@/utils/VirtualExhibitionsDataUpcoming';
+import { dummyExhibitions } from '@/utils/VirtualExhibitionsData';
+import { dummyExhibitions2 } from '@/utils/VirtualExhibitionsData';
 
 const VirtualExhibitions = () => {
   const [searchTerm, setSearchTerm] = useState('');

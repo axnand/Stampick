@@ -1,7 +1,9 @@
 "use client"
 import React from 'react';
 import UserProfile from '@/components/UserProfile';
-import { dummyStamps0 } from '@/utils/StampData0';
+import { dummyStampsOwned } from '@/utils/StampData0';
+import { dummyStampsCollections } from '@/utils/StampData0';
+import { dummyStampsOnSale } from '@/utils/StampData0';
 import { trendingData } from '@/utils/trendingData';
 
 const UserProfilePage = ({ params }) => {
@@ -26,7 +28,7 @@ const UserProfilePage = ({ params }) => {
   }
 
   return (
-    <UserProfile user={user} collections={dummyStamps0} />
+    <UserProfile user={user} owned={dummyStampsOwned} collections={dummyStampsCollections} onsale={dummyStampsOnSale} />
   );
 };
 
