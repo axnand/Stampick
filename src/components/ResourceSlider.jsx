@@ -12,10 +12,10 @@ export default function ResourceSlider() {
   return (
     <div className='h-full w-full relative'>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={3.25}
         spaceBetween={20}
         autoplay={{
-          delay: 2000, // Set the delay for autoplay
+          delay: 1500, // Set the delay for autoplay
           disableOnInteraction: false, // Continue autoplay after interactions
         }}
         onSwiper={(swiper) => {

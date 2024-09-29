@@ -12,7 +12,7 @@ export default function NoticeBanner() {
 
     const scrollText = () => {
       if (!isHovered) {
-        scrollAmountRef.current -= 3;
+        scrollAmountRef.current -= 1.5;
         textElement.style.transform = `translateX(${scrollAmountRef.current}px)`;
 
         if (scrollAmountRef.current <= -textElement.scrollWidth) {

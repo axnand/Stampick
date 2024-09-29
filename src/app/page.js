@@ -1,13 +1,12 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import Image from "next/image";
+
+
 import { dummyStamps } from "@/utils/StampData";
 import StampGrid from "@/components/StampGrid";
 import SwiperComponent from "@/components/Slider";
 import Spotlight from "@/components/Spotlight";
 import PhilatelicResources from "@/components/PhilatelicResources";
-import Footers from "@/components/Footers";
 import Subscribe from "@/components/Subscribe";
 import TrendingComponent from "@/components/Trending";
 import NoticeBanner from '@/components/NoticeBanner';
@@ -26,19 +25,9 @@ export default function Home() {
   }, []);
 
   // usePathname and useSearchParams for Next.js App directory
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+ 
 
-  useEffect(() => {
-    if (isClient) {
-      const hash = searchParams.get('hash');
-      if (hash === 'spotlight' && spotlightRef.current) {
-        spotlightRef.current.scrollIntoView({ behavior: 'smooth' });
-      } else if (hash === 'drops' && stampGridRef.current) {
-        stampGridRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [isClient, pathname, searchParams]);
+
 
   return (
     <>
