@@ -2,7 +2,7 @@ export const trendingData = {
     '1H': [
         {
             collector: 'Priyanshu',
-            img: '/profile/james.svg',
+            img: '/profile/5.svg',
             items: 150,
             id: 1,
             collectibletitle: 'Botanical Water Colour Collection',
@@ -25,7 +25,7 @@ export const trendingData = {
         },
         {
             collector: 'Husain',
-            img: '/profile/james.svg',
+            img: '/profile/1.svg',
             items: 129,
             id: 2,
             collectibletitle: 'Legend Of Odisha',
@@ -48,7 +48,7 @@ export const trendingData = {
         },
         {
             collector: 'Anand',
-            img: '/profile/james.svg',
+            img: '/profile/2.svg',
             items: 115,
             id: 3,
             collectibletitle: 'Aptos',
@@ -71,7 +71,7 @@ export const trendingData = {
         },
         {
             collector: 'James',
-            img: '/profile/james.svg',
+            img: '/profile/3.svg',
             items: 103,
             id: 4,
             collectibletitle: 'Gangadhar Meher',
@@ -94,7 +94,7 @@ export const trendingData = {
         },
         {
             collector: 'Sami',
-            img: '/profile/james.svg',
+            img: '/profile/4.svg',
             items: 111,
             id: 5,
             collectibletitle: 'Abbakka Chowta',
@@ -117,7 +117,7 @@ export const trendingData = {
         },
         {
             collector: 'Pandey',
-            img: '/profile/james.svg',
+            img: '/profile/5.svg',
             items: 105,
             id: 6,
             collectibletitle: 'Karpoori Thakur',
@@ -140,7 +140,7 @@ export const trendingData = {
         },
         {
             collector: 'Jumal',
-            img: '/profile/james.svg',
+            img: '/profile/6.svg',
             items: 102,
             id: 7,
             collectibletitle: 'New Arrival',
@@ -166,7 +166,7 @@ export const trendingData = {
     '1D': [
         {
             collector: 'Husain',
-            img: '/profile/james.svg',
+            img: '/profile/1.svg',
             items: 98,
             id: 1,
             collectibletitle: 'Royal Heritage',
@@ -189,7 +189,7 @@ export const trendingData = {
         },
         {
             collector: 'James',
-            img: '/profile/james.svg',
+            img: '/profile/2.svg',
             items: 130,
             id: 2,
             collectibletitle: 'Legend Of Odisha',
@@ -212,7 +212,7 @@ export const trendingData = {
         },
         {
             collector: 'Priyanshu',
-            img: '/profile/james.svg',
+            img: '/profile/3.svg',
             items: 120,
             id: 3,
             collectibletitle: 'New Arrival',
@@ -235,7 +235,7 @@ export const trendingData = {
         },
         {
             collector: 'Anand',
-            img: '/profile/james.svg',
+            img: '/profile/4.svg',
             items: 105,
             id: 4,
             collectibletitle: 'Historic Moments',
@@ -258,7 +258,7 @@ export const trendingData = {
         },
         {
             collector: 'Sami',
-            img: '/profile/james.svg',
+            img: '/profile/5.svg',
             items: 115,
             id: 5,
             collectibletitle: 'Ancient Scripts',
@@ -281,7 +281,7 @@ export const trendingData = {
         },
         {
             collector: 'Jumal',
-            img: '/profile/james.svg',
+            img: '/profile/6.svg',
             items: 108,
             id: 6,
             collectibletitle: 'Modern Art',
@@ -304,7 +304,7 @@ export const trendingData = {
         },
         {
             collector: 'Pandey',
-            img: '/profile/james.svg',
+            img: '/profile/7.svg',
             items: 108,
             id: 7,
             collectibletitle: 'Karpoori Thakur',
@@ -330,7 +330,7 @@ export const trendingData = {
     '7D': [
         {
             collector: 'James',
-            img: '/profile/james.svg',
+            img: '/profile/8.svg',
             items: 112,
             id: 1,
             collectibletitle: 'Botanical Water Colour Collection',
@@ -353,7 +353,7 @@ export const trendingData = {
         },
         {
             collector: 'Husain',
-            img: '/profile/james.svg',
+            img: '/profile/1.svg',
             items: 99,
             id: 6,
             collectibletitle: 'Karpoori Thakur',
@@ -376,7 +376,7 @@ export const trendingData = {
         },
         {
             collector: 'Priyanshu',
-            img: '/profile/james.svg',
+            img: '/profile/2.svg',
             items: 104,
             id: 7,
             collectibletitle: 'Ancient Scripts',
@@ -399,7 +399,7 @@ export const trendingData = {
         },
         {
             collector: 'Sami',
-            img: '/profile/james.svg',
+            img: '/profile/3.svg',
             items: 123,
             id: 8,
             collectibletitle: 'Historic Moments',
@@ -422,7 +422,7 @@ export const trendingData = {
         },
         {
             collector: 'Pandey',
-            img: '/profile/james.svg',
+            img: '/profile/4.svg',
             items: 110,
             id: 9,
             collectibletitle: 'Ancient Scripts Collection',
@@ -445,7 +445,7 @@ export const trendingData = {
         },
         {
             collector: 'Anand',
-            img: '/profile/james.svg',
+            img: '/profile/6.svg',
             items: 108,
             id: 6,
             collectibletitle: 'Modern Art',
@@ -468,7 +468,7 @@ export const trendingData = {
         },
         {
             collector: 'Jumal',
-            img: '/profile/james.svg',
+            img: '/profile/5.svg',
             items: 108,
             id: 7,
             collectibletitle: 'Chandshekhar',
