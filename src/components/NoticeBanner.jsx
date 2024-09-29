@@ -5,21 +5,35 @@ export default function NoticeBanner() {
   const textRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const animationFrame = useRef();
-  const scrollAmountRef = useRef(window.innerWidth); // Track the current scroll position
+  const [scrollAmount, setScrollAmount] = useState(0); // Track the current scroll position
+  const [windowWidth, setWindowWidth] = useState(0); // Track window width after mounting
 
   useEffect(() => {
+    // Set the window width only after the component is mounted
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+    }
+
     const textElement = textRef.current;
+
+    // Initialize the scroll amount to start from the right
+    setScrollAmount(windowWidth);
 
     const scrollText = () => {
       if (!isHovered) {
-        scrollAmountRef.current -= 1.5;
-        textElement.style.transform = `translateX(${scrollAmountRef.current}px)`;
+        setScrollAmount(prev => {
+          const newScrollAmount = prev - 1.5;
 
-        if (scrollAmountRef.current <= -textElement.scrollWidth) {
-          scrollAmountRef.current = window.innerWidth;
-        }
+          // Reset scroll position if the text has scrolled out of view
+          if (newScrollAmount <= -textElement.scrollWidth) {
+            return windowWidth; // Reset to window width
+          }
+          
+          textElement.style.transform = `translateX(${newScrollAmount}px)`;
+          return newScrollAmount;
+        });
       }
-
+      
       animationFrame.current = requestAnimationFrame(scrollText);
     };
 
@@ -28,10 +42,10 @@ export default function NoticeBanner() {
     }
 
     return () => cancelAnimationFrame(animationFrame.current);
-  }, [isHovered]);
+  }, [isHovered, windowWidth]);
 
   return (
-    <a href='https://stamp-exhibition.vercel.app/' target='_blank'>
+    <a href='https://stamp-exhibition.vercel.app/' target='_blank' rel="noopener noreferrer">
       <div
         className='w-full flex justify-between items-center text-gray-900 font-semibold text-base'
         onMouseEnter={() => {
