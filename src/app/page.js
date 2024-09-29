@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation'; // Use this for App directory
+import { usePathname, useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import { dummyStamps } from "@/utils/StampData";
 import StampGrid from "@/components/StampGrid";
@@ -25,23 +25,24 @@ export default function Home() {
     setIsClient(true);
   }, []);
 
-  // usePathname instead of useRouter for Next.js App directory
+  // usePathname and useSearchParams for Next.js App directory
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (isClient) {
-      const hash = pathname.split('#')[1];
+      const hash = searchParams.get('hash');
       if (hash === 'spotlight' && spotlightRef.current) {
         spotlightRef.current.scrollIntoView({ behavior: 'smooth' });
       } else if (hash === 'drops' && stampGridRef.current) {
         stampGridRef.current.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  }, [isClient, pathname]);
+  }, [isClient, pathname, searchParams]);
 
   return (
     <>
-    <NoticeBanner/>
+      <NoticeBanner />
       <div className="px-3">
         <div className="h-[100vh] p-3 mb-10">
           <div className="rounded-lg overflow-hidden relative h-[100vh]">
@@ -77,7 +78,6 @@ export default function Home() {
 
           <Subscribe />
           <PhilatelicResources />
-          
         </div>
       </div>
     </>

@@ -6,25 +6,25 @@ export const dummyExhibitions = [
       description: "The Largest Stamp Show in Delhi. Sponsored by the Indian Philatelic Association and the Orig Stamp Club.",
       audience: "#Stamp Dealers",
       collectingArea: "#Postal History",
-      imageUrl: "/images/exhibition1.svg"
+      imageUrl: "/images/exhibition1.png"
     },
     {
       id: 2,
-      title: "Mahatma Gandhi National Stamp Show",
+      title: "Mahatma Gandhi Stamp Show",
       dates: "Jun 1, 2024 - Jun 7, 2024",
       description: "The Largest Stamp Show in India Sponsored by the Phoenix Philatelic Association and the Indiapost.",
       audience: "#Stamp Dealers",
       collectingArea: "#Postal History",
-      imageUrl: "/images/exhibition2.svg"
+      imageUrl: "/images/exhibition2.png"
     },
     {
       id: 3,
-      title: "Philex 2024 National Stamp Exhibition",
+      title: "Philex 2024 Stamp Exhibition",
       dates: "Feb 14, 2025 - Feb 17, 2025",
       description: "The Philex Stamp Show in South Delhi Sponsored by the Stamps Association and the Mesa Stamp Club.",
       audience: "#Stamp Dealers",
       collectingArea: "#Postal History",
-      imageUrl: "/images/exhibition3.svg"
+      imageUrl: "/images/image.png"
     },
 ];  
 export const dummyExhibitions2 = [
@@ -35,7 +35,7 @@ export const dummyExhibitions2 = [
     description: "Sharjah National Stamp Exhibition Sponsored by the Phoenix Philatelic Association.",
     audience: "#Stamp Dealers",
     collectingArea: "#Postal History",
-    imageUrl: "/images/exhibition4.svg"
+    imageUrl: "/images/exhibition3.png"
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ export const dummyExhibitions2 = [
     description: "The ASMIPEX Show of India Sponsored by the Indian Post Association.",
     audience: "#Stamp Dealers",
     collectingArea: "#Postal History",
-    imageUrl: "/images/exhibition5.svg"
+    imageUrl: "/images/exhibition4.png"
   },
   {
     id: 3,
@@ -53,6 +53,6 @@ export const dummyExhibitions2 = [
     description: "The Philatelic Show of Mumbai Sponsored by the Original Philatelic Association.",
     audience: "#Stamp Dealers",
     collectingArea: "#Postal History",
-    imageUrl: "/images/exhibition6.svg"
+    imageUrl: "/images/exhibition5.png"
   }
 ];  

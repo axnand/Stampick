@@ -51,8 +51,8 @@ function Navbar() {
             <Link href="/Seller" className="cursor-pointer">
               Sell
             </Link>
-            <a className="cursor-pointer">Drop</a>
-            <a className="cursor-pointer">Spotlight</a>
+            <Link href="/#drops" className="cursor-pointer">Drop</Link>
+            <Link href="/#spotlight" className="cursor-pointer">Spotlight</Link>
           </div>
         </div>
 
