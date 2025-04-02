@@ -7,7 +7,7 @@ const Footer = () => {
         
         {/* Left Side - Company Name */}
         <div className="text-sm mr-10"> 
-          © StamPick Inc.
+          © Created by <a href="https://anandmohan.vercel.app/" className="hover:text-blue-600 underline text-blue-500">Anand Mohan</a>
         </div>
 
         {/* Center - Links */}

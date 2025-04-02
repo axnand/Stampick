@@ -199,13 +199,13 @@ const Logo = () => {
   return (
     <Link href="#" className="font-normal flex space-x-2 items-center text-sm text-white py-1">
       <Image
-        src="https://assets.aceternity.com/manu.png"
+        src="/profile/anand.png"
         className="h-7 w-7 flex-shrink-0 rounded-full"
         width={50}
         height={50}
         alt="Avatar"
       />
-      <span>Manu Arora</span>
+      <span>Anand Mohan</span>
     </Link>
   );
 };
@@ -214,7 +214,7 @@ const LogoIcon = () => {
   return (
     <Link href="#" className="font-normal flex space-x-2 items-center text-sm text-white py-1">
       <Image
-        src="https://assets.aceternity.com/manu.png"
+        src="/profile/anand.png"
         className="h-7 w-7 flex-shrink-0 rounded-full"
         width={50}
         height={50}
